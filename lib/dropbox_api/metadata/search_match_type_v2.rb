@@ -6,6 +6,7 @@ module DropboxApi::Metadata
       filename
       file_content
       filename_and_content
+      both_filename_and_content
       image_content
     ].freeze
 
