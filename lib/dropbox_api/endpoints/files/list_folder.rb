@@ -33,11 +33,13 @@ module DropboxApi::Endpoints::Files
         :include_deleted,
         :shared_link,
         :include_has_explicit_shared_members,
+        :include_non_downloadable_files,
         :limit
       ], options)
       options[:recursive] ||= false
       options[:include_media_info] ||= false
       options[:include_deleted] ||= false
+      options[:include_non_downloadable_files] ||= false
       options[:shared_link] = build_shared_link_param(options[:shared_link]) if options[:shared_link]
       options[:limit] = options[:limit] if options[:limit]
       
